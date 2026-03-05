@@ -1,0 +1,6 @@
+# Forçar o GitHub a ignorar o formato Jupyter e focar no código
+*.ipynb linguist-detectable=false
+*.ipynb linguist-documentation=false
+
+# Se você quiser que o GitHub conte o código dentro dos notebooks como Python:
+*.ipynb linguist-language=Python
