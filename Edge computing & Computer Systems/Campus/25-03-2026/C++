@@ -1,50 +1,53 @@
-void setup(){
-  pinMode(7, INPUT);
-  pinMode(13, OUTPUT);
-  pinMode(12, OUTPUT);
-  pinMode(11, OUTPUT);
-  pinMode(5, OUTPUT);
-  pinMode(3, OUTPUT);
-  pinMode(2, OUTPUT);
+const byte BOTAO = 7;
+const byte LEDVERMELHO1 = 13;
+const byte LEDAMARELO1 = 12;
+const byte LEDVERDE1 = 11;
+const byte LEDVERMELHO2 = 5;
+const byte LEDAMARELO2 = 3;
+const byte LEDVERDE2 = 2;
+
+void setup() {
+  pinMode(LEDVERMELHO1, OUTPUT);
+  pinMode(LEDAMARELO1, OUTPUT);
+  pinMode(LEDVERDE1, OUTPUT);
+  pinMode(LEDVERMELHO2, OUTPUT);
+  pinMode(LEDAMARELO2, OUTPUT);
+  pinMode(LEDVERDE2, OUTPUT);
+  pinMode(BOTAO, INPUT_PULLUP);
 }
- 
-void loop(){
-  if(digitalRead(7) == 1){
-    digitalWrite(13, HIGH);
-    digitalWrite(2, HIGH);
-    digitalWrite(12, HIGH);
-    digitalWrite(11, HIGH);
-    digitalWrite(5, HIGH);
-    digitalWrite(3, HIGH);
-    delay(10000);
-  }
-else {
-    digitalWrite(13, HIGH);
-    digitalWrite(2, HIGH);
-    digitalWrite(12, LOW);
-    digitalWrite(11, LOW);
-    digitalWrite(5, LOW);
-    digitalWrite(3, LOW);
-    delay(4000);
-    digitalWrite(12, LOW);
-    digitalWrite(11, LOW);
-    digitalWrite(5, LOW);
-    digitalWrite(3, HIGH);
-    digitalWrite(2, LOW);
-    delay(1500);
-    digitalWrite(13, LOW);
-    digitalWrite(12, LOW);
-    digitalWrite(11, HIGH);
-    digitalWrite(5, HIGH);
-    digitalWrite(3, LOW);
-    digitalWrite(2, LOW);
-    delay(4000);
-    digitalWrite(13, LOW);
-    digitalWrite(12, HIGH);
-    digitalWrite(11, LOW);
-    digitalWrite(3, LOW);
-    digitalWrite(2, LOW);
-    delay(1500);
-  }
-}
-  
+
+void loop() {
+  if (digitalRead(BOTAO) == 0) {
+    digitalWrite(LEDVERMELHO1, HIGH);
+    digitalWrite(LEDVERDE1, HIGH);
+    digitalWrite(LEDAMARELO1, HIGH);
+    digitalWrite(LEDVERMELHO2, HIGH);
+    digitalWrite(LEDAMARELO2, HIGH);
+    digitalWrite(LEDVERDE2, HIGH);
+  } else {
+    digitalWrite(LEDVERMELHO1, HIGH);
+    digitalWrite(LEDVERDE2, HIGH);
+    digitalWrite(LEDAMARELO1, LOW);
+    digitalWrite(LEDVERDE1, LOW);
+    digitalWrite(LEDVERMELHO2, LOW);
+    digitalWrite(LEDAMARELO2, LOW);
+    delay(4000);
+    digitalWrite(LEDAMARELO1, LOW);
+    digitalWrite(LEDVERDE1, LOW);
+    digitalWrite(LEDVERMELHO2, LOW);
+    digitalWrite(LEDAMARELO2, HIGH);
+    digitalWrite(LEDVERDE2, LOW);
+    delay(1500);
+    digitalWrite(LEDVERMELHO1, LOW);
+    digitalWrite(LEDAMARELO1, LOW);
+    digitalWrite(LEDVERDE1, HIGH);
+    digitalWrite(LEDVERMELHO2, HIGH);
+    digitalWrite(LEDAMARELO2, LOW);
+    digitalWrite(LEDVERDE2, LOW);
+    delay(4000);
+    digitalWrite(LEDVERMELHO1, LOW);
+    digitalWrite(LEDAMARELO1, HIGH);
+    digitalWrite(LEDVERDE1, LOW);
+    digitalWrite(LEDAMARELO2, LOW);
+    digitalWrite(LEDVERDE2, LOW);
+    delay(1500);
