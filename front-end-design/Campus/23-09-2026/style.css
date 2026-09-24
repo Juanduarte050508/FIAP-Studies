@@ -1,0 +1,408 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202020;
+    background: #f5f5f5;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin-inline: auto;
+}
+
+/* HEADER */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    padding: 20px 0;
+    background: #111;
+    color: #fff;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+}
+
+.nav a {
+    text-decoration: none;
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    padding: 100px 0;
+    color: #fff;
+    background: #272727;
+    overflow: hidden;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-shape {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: -100px;
+    right: 300px;
+
+    border-radius: 50%;
+    background: #3f3f3f;
+
+    z-index: 1;
+}
+
+.hero-eyebrow {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.hero h1 {
+    max-width: 700px;
+    margin-bottom: 20px;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 0.95;
+}
+
+.hero p {
+    max-width: 600px;
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+/* CONTENT */
+
+.content {
+    padding: 80px 0;
+}
+
+.content h2,
+.practice h2,
+.challenge h2 {
+    margin-bottom: 32px;
+    font-size: 2rem;
+}
+
+.cards {
+    display: flex;
+    gap: 24px;
+}
+
+.card {
+    flex: 1;
+    min-height: 280px;
+    padding: 32px;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    background: #fff;
+}
+
+.card-css {
+    position: relative;
+}
+
+.card-new {
+    position: absolute;
+
+   
+    top: -10px; 
+    right: -10px;
+
+    padding: 8px 12px;
+    border-radius: 999px;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    background: #111;
+
+}
+
+
+.card-position {
+    position: relative;
+
+    overflow: hidden;
+}
+
+.card-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    /* top: 10px;
+  bottom: 0;
+  left: 0;
+  right: 0; */
+
+    border: 3px solid #111;
+    border-radius: 16px;
+}
+
+.card-position .card-tag {
+    position: absolute;
+
+    top: 16px;
+    right: 16px;
+}
+
+.card-tag {
+    display: inline-block;
+    margin-bottom: 48px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: #ececec;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+.card p {
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+/* ÁREA DE PRÁTICA / SCROLL */
+
+.practice {
+    padding: 100px 0;
+}
+
+.practice-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 64px;
+}
+
+.practice-sidebar {
+    position: sticky;
+    top: 225px;
+    width: 300px;
+}
+
+.practice-sidebar span {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.practice-sidebar h2 {
+    margin-bottom: 16px;
+    font-size: 2rem;
+}
+
+.practice-sidebar p {
+    line-height: 1.6;
+}
+
+.practice-content {
+    flex: 1;
+}
+
+.practice-block {
+    min-height: 350px;
+    margin-bottom: 32px;
+    padding: 40px;
+    border-radius: 20px;
+    background: #ddd;
+}
+
+.practice-block span {
+    display: inline-block;
+    margin-bottom: 100px;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.practice-block h3 {
+    margin-bottom: 16px;
+    font-size: 2rem;
+}
+
+.practice-block p {
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* DESAFIO */
+
+.challenge {
+    padding: 100px 0;
+    color: #fff;
+    background: #111;
+}
+
+.challenge-header {
+    max-width: 600px;
+    margin-bottom: 48px;
+}
+
+.challenge-header>span {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.challenge-header h2 {
+    margin-bottom: 16px;
+    font-size: 3rem;
+}
+
+.challenge-header p {
+    line-height: 1.6;
+    color: #aaa;
+}
+
+.challenge-cards {
+    display: flex;
+    gap: 24px;
+}
+
+.challenge-card {
+    flex: 1;
+    min-height: 300px;
+    padding: 32px;
+    border: 1px solid #444;
+    border-radius: 16px;
+    background: #222;
+}
+
+.challenge-card-number {
+    display: inline-block;
+    margin-bottom: 80px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #888;
+}
+
+.challenge-card h3 {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+
+}
+
+
+.challenge-card p {
+
+    line-height: 1.5;
+    color: #bbb;
+    
+}
+
+.notification {
+   
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #111;
+    background: #fff;
+}
+
+
+.challenge-badge {
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #111;
+    background: #fff;
+}
+
+
+
+.challenge-overlay {
+    border: 3px solid #fff;
+    border-radius: 16px;
+}
+
+/* BOTÃO QUE SERÁ CONFIGURADO DURANTE A AULA */
+
+.help-button {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 20;
+
+    width: 56px;
+    height: 56px;
+    /* margin: 24px; */
+    background: #616161;
+    color: #fff;
+    border: 0;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.notification {
+ position: absolute;
+
+ top: 0;
+ right: 0;
+
+ width: 14px;
+ height: 14px;
+
+ border: 2px solid  #fff;
+ border-radius: 50%;
+
+ background-color: #e63946;
+}
+
+.challenge-card-notification, .challenge-card-bedge, .challenge-card-overlay{
+    position: relative;
+   
+}

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Front-End Lab | CSS Position</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo">Front-End Lab</a>
+            <nav class="nav">
+                <a href="#inicio">Início</a>
+                <a href="#conteudos">Conteúdos</a>
+                <a href="#desafio">Desafio</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-shape"></div>
+            <div class="container">
+                <span class="hero-eyebrow">Laboratório CSS</span>
+                <h1>Aprendendo CSS Position na prática</h1>
+                <p>
+                    Vamos transformar esta página usando diferentes formas de
+                    posicionamento do CSS.
+                </p>
+            </div>
+        </section>
+
+        <section class="content" id="conteudos">
+            <div class="container">
+                <h2>Conteúdos da aula</h2>
+
+                <div class="cards">
+                    <article class="card card-html">
+                        <span class="card-tag">HTML</span>
+                        <h3>Estrutura</h3>
+                        <p>HTML define a estrutura e a organização do conteúdo.</p>
+                        <a href="#">Ver conteúdo</a>
+                    </article>
+
+                    <article class="card card-css">
+                        <span class="card-new">NOVO</span>
+
+                        <span class="card-tag">CSS</span>
+                        <h3>Estilização</h3>
+                        <p>CSS controla aparência, layout e posicionamento.</p>
+                        <a href="#">Ver conteúdo</a>
+                    </article>
+
+                    <article class="card card-position">
+                        <span class="card-tag">AULA DE HOJE</span>
+                        <h3>Position</h3>
+                        <p>Vamos controlar onde os elementos aparecem na interface.</p>
+                        <a href="#">Começar laboratório</a>
+
+                        <div class="card-overlay"></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="practice">
+            <div class="container practice-layout">
+                <aside class="practice-sidebar">
+                    <span>POSITION: STICKY</span>
+                    <h2>Acompanhe o conteúdo</h2>
+                    <p>
+                        Este bloco ficará visível enquanto percorremos os exemplos desta
+                        seção.
+                    </p>
+                </aside>
+
+                <div class="practice-content">
+                    <article class="practice-block">
+                        <span>01</span>
+                        <h3>Relative</h3>
+                        <p>
+                            O elemento continua no fluxo normal, mas pode ser deslocado em
+                            relação à sua posição original.
+                        </p>
+                    </article>
+
+                    <article class="practice-block">
+                        <span>02</span>
+                        <h3>Absolute</h3>
+                        <p>
+                            O elemento sai do fluxo e utiliza um containing block como
+                            referência para seu posicionamento.
+                        </p>
+                    </article>
+
+                    <article class="practice-block">
+                        <span>03</span>
+                        <h3>Fixed</h3>
+                        <p>
+                            O elemento sai do fluxo e normalmente permanece posicionado em
+                            relação à viewport.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="challenge" id="desafio">
+            <div class="container">
+                <div class="challenge-header">
+                    <span>DESAFIO</span>
+                    <h2>Agora é com você</h2>
+                    <p>Use os conceitos da aula para completar os elementos abaixo.</p>
+                </div>
+
+                <div class="challenge-cards">
+                    <article class="challenge-card challenge-card-notification">
+                        <span class="challenge-card-number">01</span>
+                        <h3>Notificação</h3>
+                        <p>
+                            Faça a bolinha de notificação com o número 3 ficar no canto
+                            superior direito do primeiro card.
+                        </p>
+                        <span class="notification">3</span>
+                    </article>
+
+                    <article class="challenge-card challenge-card-badge">
+                        <span class="challenge-card-number">02</span>
+                        <h3>Badge</h3>
+                        <p>
+                            Faça o badge NOVO ficar parcialmente para fora do canto
+                            superior direito do segundo card.
+                        </p>
+                        <span class="challenge-badge">NOVO</span>
+                    </article>
+
+                    <article class="challenge-card challenge-card-overlay">
+                        <span class="challenge-card-number">03</span>
+                        <h3>Overlay</h3>
+                        <p>
+                            Faça uma camada ocupar toda a área deste card utilizando apenas
+                            posicionamento.
+                        </p>
+                        <div class="challenge-overlay"></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button class="help-button">?
+        <span class="notification"></span>
+    </button>
+
+</body>
+
+</html>
