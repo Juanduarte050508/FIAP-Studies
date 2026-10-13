@@ -352,6 +352,9 @@ a {
 
 
 .challenge-badge {
+    position: absolute;
+    top: -10px;
+    right:-10px;
     padding: 8px 12px;
     border-radius: 999px;
     font-size: 0.75rem;
@@ -363,6 +366,8 @@ a {
 
 
 .challenge-overlay {
+    position: absolute;
+    inset: 0;
     border: 3px solid #fff;
     border-radius: 16px;
 }
@@ -390,8 +395,8 @@ a {
 .notification {
  position: absolute;
 
- top: 0;
- right: 0;
+ top: 0px;
+ right: 0px;
 
  width: 14px;
  height: 14px;
@@ -402,7 +407,7 @@ a {
  background-color: #e63946;
 }
 
-.challenge-card-notification, .challenge-card-bedge, .challenge-card-overlay{
+.challenge-card-notification, .challenge-card-badge, .challenge-card-overlay{
     position: relative;
    
 }
