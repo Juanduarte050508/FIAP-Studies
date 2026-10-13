@@ -1,0 +1,382 @@
+/* PULSE — PROJETO INICIAL | AULA DE RESPONSIVIDADE
+   O layout abaixo foi feito para desktop.
+   Durante a aula, vamos torná-lo adaptável a outros tamanhos de tela.
+   NÃO há media queries prontas nesta versão. */
+
+:root {
+  --background: #10101b;
+  --surface: #1a1a29;
+  --light: #f7f5ff;
+  --muted: #bab7cb;
+  --accent: #a985ff;
+  --orange: #ff9169;
+  --container: 1120px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--light);
+  background: var(--background);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.container {
+  width: min(100% - 40px, var(--container));
+  margin-inline: auto;
+}
+
+.site-header {
+  border-bottom: 1px solid #ffffff1c;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 88px;
+  gap: 32px;
+}
+
+.logo,
+.site-footer strong {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.logo span,
+.site-footer strong span {
+  color: var(--accent);
+}
+
+.navigation {
+  display: flex;
+  gap: 30px;
+}
+
+.navigation a {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.navigation a:hover,
+.text-link:hover,
+.card-link:hover {
+  color: var(--accent);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border-radius: 9px;
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.button-outline {
+  border-color: #8a849f;
+}
+
+.button-primary {
+  background: var(--accent);
+  color: #171226;
+}
+
+.header-cta{
+
+  @media (max-width: 900px){
+    display: none;
+  }
+
+}
+
+.button-primary:hover {
+  background: #bd9eff;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: 535px;
+  gap: 72px;
+  padding-block: 64px 76px;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: 68px;
+  line-height: 1.05;
+  letter-spacing: -3px;
+  margin: 0 0 24px;
+}
+
+h1 span {
+  color: var(--accent);
+}
+
+.hero-description {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--muted);
+  margin: 0 0 32px;
+}
+
+.hero-art {
+  min-height: 380px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.art-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(1px);
+}
+
+.circle-one {
+  width: 270px;
+  height: 270px;
+  background: #6f49b7;
+  transform: translate(-70px, -32px);
+}
+
+.circle-two {
+  width: 190px;
+  height: 190px;
+  background: #ef7c78;
+  transform: translate(125px, 86px);
+}
+
+.art-ticket {
+  z-index: 1;
+  width: 260px;
+  min-height: 326px;
+  background: linear-gradient(140deg, #e8d9ff, #9f83ed);
+  color: #221638;
+  padding: 24px;
+  border-radius: 14px;
+  transform: rotate(-8deg);
+  box-shadow: 0 24px 50px #0005;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ticket-overline,
+.ticket-bottom {
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.art-ticket strong {
+  font-size: 44px;
+  line-height: .95;
+  letter-spacing: -2px;
+}
+
+.events-section {
+  padding: 72px 0 90px;
+  background: #171624;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+h2 {
+  font-size: 38px;
+  line-height: 1.12;
+  margin: 0;
+  letter-spacing: -1.2px;
+}
+
+.text-link {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.event-card {
+  min-width: 0;
+  border: 1px solid #ffffff24;
+  background: #211f30;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.event-visual {
+  min-height: 205px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.event-visual span {
+  text-align: center;
+  font-weight: 900;
+  font-size: 37px;
+  line-height: .95;
+  letter-spacing: -2px;
+  transform: rotate(-9deg);
+}
+
+.visual-purple {
+  background: linear-gradient(140deg, #bc8bff, #684ac1);
+  color: #210c3a;
+}
+
+.visual-orange {
+  background: linear-gradient(140deg, #ffd099, #f97868);
+  color: #4d1822;
+}
+
+.visual-blue {
+  background: linear-gradient(140deg, #9df8e4, #618add);
+  color: #102b50;
+}
+
+.event-info {
+  padding: 24px;
+}
+
+.event-tag {
+  font-size: 11px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 22px;
+  margin: 12px 0 8px;
+}
+
+.event-info p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 24px;
+}
+
+.card-link {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: center;
+  padding-block: 95px;
+}
+
+.about-section p:last-child {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.newsletter-section {
+  background: #29213b;
+  padding-block: 68px;
+}
+
+.newsletter-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.newsletter-form label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.input-group {
+  display: flex;
+  gap: 12px;
+}
+
+.input-group input {
+  flex: 1;
+  min-width: 0;
+  border-radius: 9px;
+  border: 1px solid #b7a4dc;
+  padding: 15px;
+  background: #fff;
+  color: #171226;
+}
+
+.site-footer {
+  padding-block: 28px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer-content p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* LABORATÓRIO: adicione as regras de responsividade abaixo desta linha. */

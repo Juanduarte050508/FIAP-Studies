@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulse — Eventos e experiências</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="#inicio" class="logo" aria-label="Pulse, início">pulse<span>.</span></a>
+      <nav class="navigation" aria-label="Navegação principal">
+        <a href="#eventos">Eventos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#newsletter">Newsletter</a>
+      </nav>
+      <a class="button button-outline header-cta" href="#eventos">Explorar eventos</a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow">Cultura, música e conexões</p>
+        <h1 id="hero-title">Encontre sua próxima <span>experiência.</span></h1>
+        <p class="hero-description">Descubra eventos incríveis, conheça novas pessoas e viva histórias que merecem ser
+          lembradas.</p>
+        <a class="button button-primary" href="#eventos">Ver próximos eventos <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-circle circle-one"></div>
+        <div class="art-circle circle-two"></div>
+        <div class="art-ticket">
+          <span class="ticket-overline">PULSE / LIVE EXPERIENCES</span>
+          <strong>FEEL<br />EVERY<br />MOMENT.</strong>
+          <span class="ticket-bottom">2026 — SÃO PAULO</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="events-section" id="eventos" aria-labelledby="events-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Agenda em destaque</p>
+            <h2 id="events-title">Próximos eventos</h2>
+          </div>
+          <a href="#newsletter" class="text-link">Receber novidades →</a>
+        </div>
+
+        <div class="event-grid">
+          <article class="event-card">
+            <div class="event-visual visual-purple"><span>LIVE<br />SOUND</span></div>
+            <div class="event-info">
+              <span class="event-tag">Música</span>
+              <h3>Neon Sessions</h3>
+              <p>18 OUT · São Paulo, SP</p>
+              <a class="card-link" href="#newsletter">Saiba mais <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="event-card">
+            <div class="event-visual visual-orange"><span>CREATIVE<br />MINDS</span></div>
+            <div class="event-info">
+              <span class="event-tag">Criatividade</span>
+              <h3>Design Weekend</h3>
+              <p>24 OUT · São Paulo, SP</p>
+              <a class="card-link" href="#newsletter">Saiba mais <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="event-card">
+            <div class="event-visual visual-blue"><span>FUTURE<br />NOW</span></div>
+            <div class="event-info">
+              <span class="event-tag">Tecnologia</span>
+              <h3>Future Talks</h3>
+              <p>07 NOV · São Paulo, SP</p>
+              <a class="card-link" href="#newsletter">Saiba mais <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section container" id="sobre">
+      <div>
+        <p class="eyebrow">Muito além de um evento</p>
+        <h2>Momentos que conectam pessoas.</h2>
+      </div>
+      <p>A Pulse reúne experiências para quem gosta de descobrir novas ideias, sons e encontros. Escolha um evento e
+        faça parte dessa história.</p>
+    </section>
+
+    <section class="newsletter-section" id="newsletter">
+      <div class="container newsletter-content">
+        <div>
+          <p class="eyebrow">Fique por dentro</p>
+          <h2>Não perca o próximo encontro.</h2>
+        </div>
+        <form class="newsletter-form" action="#newsletter">
+          <label for="email">Seu melhor e-mail</label>
+          <div class="input-group">
+            <input id="email" name="email" type="email" placeholder="voce@exemplo.com" required />
+            <button class="button button-primary" type="submit">Inscrever</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content"><strong>pulse<span>.</span></strong>
+      <p>© 2026 Pulse. Feito para conectar.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
