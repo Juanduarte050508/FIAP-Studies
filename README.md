@@ -33,8 +33,21 @@ The goal is to document my evolution as a developer and maintain a structured hi
 ---
 
 ## 📂 Repository Organization
-Each subject has its own folder following the structure:
-`Subject-Name / Assignments / source-code`
+Each subject has its own folder, split into up to three categories:
+
+```
+subject-name/
+├── aulas/        # in-class lessons, one folder per class: YYYY-MM-DD-topic
+├── exercicios/   # homework and practice
+└── avaliacoes/   # checkpoints and sprints
+```
+
+| Subject | Folder |
+| --- | --- |
+| Computational Thinking with Python | [computational-thinking-python/](computational-thinking-python/) |
+| Front-End Design | [front-end-design/](front-end-design/) |
+| Web Development | [web-development/](web-development/) |
+| Edge Computing | [edge-computing/](edge-computing/) |
 
 ---
 *Developed by: Juan Duarte - FIAP Paulista Campus*
