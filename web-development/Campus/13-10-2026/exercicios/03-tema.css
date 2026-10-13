@@ -1,0 +1,24 @@
+.pagina {
+  min-height: 100vh;
+  padding: 24px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagina.claro {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.pagina.escuro {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.pagina button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+}
